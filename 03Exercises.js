@@ -1,3 +1,6 @@
+var assert = require('assert')
+// QuickCheck for generating tests 
+
 // Minimum -----------------------------
 
 // Write a function that takes two arguments and return their minimum
@@ -14,6 +17,10 @@ const min = function(a, b) {
 
 function min(a, b) {
 	return (a >= b) ? b : a;
+}
+
+function testMin() {
+    assert.strictEqual(min(2, 1), 1)
 }
 
 // Recursion -----------------------------
@@ -38,6 +45,10 @@ function isEven(num) {
   	if (num === 1) return false;
   	num -= 2;
   	return isEven(num);
+}
+
+function testIsEven() {
+    assert.strictEqual(isEven(4), false)
 }
 
 // Bean Counting -----------------------------
@@ -73,3 +84,25 @@ function countChar(str, ltr) {
   }
   return count;
 }
+
+// Test
+var tests = [
+    testMin,
+    testIsEven
+]
+
+function test() {
+    tests.forEach(function(test) {
+        console.log('>>> ' + test.name)
+        try {
+            test()
+            console.log('OK');
+        } catch (e) {
+            console.log(e.toString());
+            console.log('Fail');
+        }
+        console.log('')
+    })
+};
+
+test();

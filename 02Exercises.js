@@ -1,3 +1,5 @@
+var assert = require('assert')
+
 // ------------------- Looping a Triangle
 
 /*
@@ -10,6 +12,8 @@ Write a loop that makes seven calls to console.log to output the following trian
 ######
 #######
 */
+// Hard to test because it's not callable
+// Node - assert
 
 for (let i = 0; i < 7; i++) {
   let print = '';
@@ -40,6 +44,19 @@ for (let i = 1; i <= 100; i++) {
   } else {
     console.log(i);
   }
+}
+
+
+// Oli's idea for side-effect in tests:
+
+function olisThing(s, log=console.log) {}
+    log(s);
+}
+
+function testOlisThing() {
+    var spy = sinon.spy()  // This is a library for spys/mocks
+    olisThing('oli', spy)  // Pass in the spy, probably nothing happens
+    assert.True(spy.calledWith('oli')
 }
 
 // ------------------- Chessboard
