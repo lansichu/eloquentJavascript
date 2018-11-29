@@ -52,3 +52,17 @@ let hungryRabbit = new Rabbit("hungry");
 # Symbols
 - It's possible for multiple interfaces to use the same property name for different things --> could be bad
 - Property names can also be symbols - unlike strings, newly created symbols are unique --> cannot create the same symbol twice
+- It’s possible to include symbol properties in object expressions and classes by using square brackets around the property name
+
+Inside a class declaration, methods that have static written before their name are stored on the constructor
+
+
+# Inheritance
+
+- Create a new class, much like the old class, but with new definitions for some of its properties —> inheritance
+- The word `extends` indicates that this class shouldn’t be directly based on the default `Object` prototype but on some other class —> superclass while the derived class is the subclass
+
+
+# The instanceOf Operator
+
+- It may be useful to know whether an object was derived from a specific class —> instanceOf
