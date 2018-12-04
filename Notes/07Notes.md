@@ -1,0 +1,1 @@
+- Graph is a collection of points with lines between them
