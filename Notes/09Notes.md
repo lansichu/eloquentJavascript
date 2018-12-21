@@ -82,3 +82,9 @@ console.log(match.index);
 console.log("one two 100".match(/\d+/));
 // → ["100"]
 ```
+
+# The Date Class
+- console.log(new Date()) will return you the current time`
+- you can also create an object for a specific time
+    - console.log(new Date(2018, 11, 23)) --> Dec 23 2018 // JS uses a convention where month number start at zero but day numbers start at 1
+- Timestamps are stored as the number of milliseconds since the start of 1970 (UTC) - "Unix time"
